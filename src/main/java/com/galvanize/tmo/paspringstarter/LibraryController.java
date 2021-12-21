@@ -32,13 +32,13 @@ public class LibraryController {
         return new ResponseEntity<>(bookStr, HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/api/books", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping("/api/books")
     public List<Book> getBooks() {
-        Gson gson = new Gson();
+//        Gson gson = new Gson();
 
         List<Book> l = service.sortListOfBooks();
 
-        String bookStr = gson.toJson(l);
+//        String bookStr = gson.toJson(l);
         return l;
 //        return new ResponseEntity<>(bookStr, HttpStatus.OK);
     }
