@@ -6,7 +6,7 @@ public class Book {
     int id;
     String author;
     String title;
-    String yearPublished;
+    int yearPublished;
 
     public void setId(int id) {
         this.id = id;
