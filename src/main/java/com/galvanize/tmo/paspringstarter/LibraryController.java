@@ -16,6 +16,7 @@ public class LibraryController {
 
     @GetMapping("/health")
     public void health() {
+        System.out.println("App is running");
 
     }
 
