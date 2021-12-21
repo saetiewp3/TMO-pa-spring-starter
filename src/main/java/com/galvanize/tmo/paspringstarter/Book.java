@@ -16,8 +16,16 @@ public class Book {
         return id;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public String getTitle() {
         return title;
+    }
+    
+    public int getYearPublished() {
+        return yearPublished;
     }
 
 }
