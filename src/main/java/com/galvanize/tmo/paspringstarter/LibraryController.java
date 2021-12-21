@@ -33,20 +33,16 @@ public class LibraryController {
     }
 
     @GetMapping("/api/books")
-    public List<Book> getBooks() {
-//        Gson gson = new Gson();
-
+    public Books getBooks() {
         List<Book> l = service.sortListOfBooks();
-
-//        String bookStr = gson.toJson(l);
-        return l;
-//        return new ResponseEntity<>(bookStr, HttpStatus.OK);
+        Books books = new Books();
+        books.setBooks(l);
+        return books;
     }
 
     @DeleteMapping("/api/books")
     public ResponseEntity<String> deleteBooks() {
         service.deleteBooks();
-
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
